@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import React from "react";
 
@@ -8,6 +9,7 @@ export default function Layout({
     <main>
       <Navbar />
       {children}
+      <Footer />
     </main>
   );
 }

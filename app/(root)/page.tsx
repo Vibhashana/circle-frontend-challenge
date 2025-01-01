@@ -11,9 +11,6 @@ export default function Home() {
           <h2 className="text-xl">Books</h2>
         </div>
       </section>
-      <footer>
-        <div className="content-container">Footer</div>
-      </footer>
     </>
   );
 }

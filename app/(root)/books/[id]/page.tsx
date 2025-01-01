@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { fetchBook } from "@/lib/actions";
 import { Book } from "@/types/book-types";
-import { Barcode, UserPen } from "lucide-react";
+import { Barcode, ShoppingBasket, UserPen } from "lucide-react";
 import Image from "next/image";
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
@@ -30,7 +30,6 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   <UserPen />
                   {book.author}
                 </div>
-                <div className="text-xl font-bold">{book.price}</div>
                 <div className="flex items-center gap-2 text-lg">
                   {book.availableStock}
                 </div>
@@ -38,7 +37,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   <Barcode />
                   {book.isbn}
                 </div>
-                <Button>Purchase</Button>
+                <div className="text-xl font-bold">{book.price}</div>
+                <Button className="flex items-center gap-2">
+                  <ShoppingBasket />
+                  <span>Buy</span>
+                </Button>
               </div>
             </div>
           </>

@@ -1,5 +1,9 @@
 const Page = () => {
-  return <div>Single Book Page</div>;
+  return (
+    <section>
+      <div className="content-container">Signal Books Page</div>
+    </section>
+  );
 };
 
 export default Page;

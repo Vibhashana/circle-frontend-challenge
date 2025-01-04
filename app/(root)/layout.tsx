@@ -7,7 +7,7 @@ export default function Layout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <main>
+      <main className="flex min-h-screen flex-col">
         <Navbar />
         {children}
       </main>

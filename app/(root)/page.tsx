@@ -37,7 +37,7 @@ export default async function Home(props: HomeProps) {
         </div>
       </section>
       <Search className="sticky top-4 z-30 -mt-[30px] border-2 border-neutral-400" />
-      <section className="section sticky top-0">
+      <section className="section">
         <div className="content-container">
           <h1 className="section-title">
             {query ? `Search result for '${query}'` : `Browse all books`}

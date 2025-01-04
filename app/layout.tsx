@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,7 +10,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "BookNest",
+  title: {
+    template: "BookNest | %s",
+    default: "BookNest",
+  },
   description: "A book store for everyone!",
 };
 
@@ -31,6 +35,7 @@ export default function RootLayout({
           storageKey="theme"
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

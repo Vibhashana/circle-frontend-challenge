@@ -2,9 +2,9 @@ export type Book = {
   id: number;
   title: string;
   author: string;
-  isbn: string;
+  isbn?: string;
   price: number;
-  availableStock: number;
+  availableStock?: number;
 };
 
 export type Books = Book[];

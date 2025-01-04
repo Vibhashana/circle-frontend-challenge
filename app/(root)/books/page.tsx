@@ -9,9 +9,9 @@ const Page = async () => {
   const books: BooksType = await fetchBooks();
 
   return (
-    <section>
+    <section className="section">
       <div className="content-container">
-        <h1 className="text-2xl">Books</h1>
+        <h1 className="section-title">Browse all books</h1>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <Suspense fallback={<BookCardSkeleton />}>

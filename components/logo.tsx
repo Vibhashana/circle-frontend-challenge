@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="inline-flex items-center gap-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="Layer_1"

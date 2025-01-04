@@ -25,7 +25,7 @@ const Search = ({ className }: { className?: string }) => {
   return (
     <div
       className={clsx(
-        "mx-4 flex h-[60px] items-center rounded-lg bg-white px-5 py-2 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 sm:mx-auto sm:max-w-[500]",
+        "mx-4 flex h-[60px] items-center rounded-lg bg-white px-5 py-2 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 sm:mx-auto sm:w-[500px]",
         className
       )}
     >

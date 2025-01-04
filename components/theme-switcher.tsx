@@ -16,7 +16,7 @@ const ThemeSwitcher = () => {
       aria-label="Toggle theme"
       title="Toggle theme"
     >
-      <Sun className="hidden h-[1.5rem] w-[1.3rem] dark:block" />
+      <Sun className="hidden dark:block" />
       <Moon className="h-5 w-5 dark:hidden" />
     </Button>
   );

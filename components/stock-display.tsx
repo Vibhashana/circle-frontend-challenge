@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { LibraryBig } from "lucide-react";
+import { BookText, BookX, LibraryBig } from "lucide-react";
 
 const StockDisplay = ({
   availableStock,
@@ -10,7 +10,15 @@ const StockDisplay = ({
 }) => {
   if (availableStock === 0) {
     return (
-      <p className="text-sm text-red-700 dark:text-red-400">Out of stock!</p>
+      <p
+        className={clsx(
+          "flex items-center gap-1 text-sm text-red-700 dark:text-red-400",
+          className
+        )}
+      >
+        <BookX size={16} />
+        <span>Out of stock!</span>
+      </p>
     );
   }
 
@@ -18,8 +26,12 @@ const StockDisplay = ({
     <>
       {availableStock > 0 && availableStock <= 5 ? (
         <p
-          className={clsx("text-sm text-red-700 dark:text-red-400", className)}
+          className={clsx(
+            "flex items-center gap-1 text-sm text-red-700 dark:text-red-400",
+            className
+          )}
         >
+          <BookText size={16} />
           {availableStock === 1
             ? "The last one"
             : `Only ${availableStock} left`}{" "}
@@ -28,12 +40,12 @@ const StockDisplay = ({
       ) : (
         <p
           className={clsx(
-            "flex items-center gap-2 text-sm text-neutral-800 dark:text-neutral-400",
+            "flex items-center gap-1 text-sm text-neutral-800 dark:text-neutral-400",
             className
           )}
         >
           <LibraryBig size={16} />
-          {availableStock} in stock
+          <span>{availableStock} in stock</span>
         </p>
       )}
     </>

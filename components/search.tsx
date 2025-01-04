@@ -25,14 +25,14 @@ const Search = ({ className }: { className?: string }) => {
   return (
     <div
       className={clsx(
-        "mx-4 flex h-[60] items-center rounded-lg bg-white px-5 py-2 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 sm:mx-auto sm:max-w-[500]",
+        "mx-4 flex h-[60px] items-center rounded-lg bg-white px-5 py-2 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 sm:mx-auto sm:max-w-[500px]",
         className
       )}
     >
       <SearchIcon className="mr-2 text-neutral-400" />
       <input
         type="search"
-        className="size-full border-0 bg-transparent text-neutral-900 outline-none"
+        className="size-full border-0 bg-transparent text-neutral-900 outline-none dark:text-neutral-100"
         placeholder="Search by book title, author or ISBN"
         onChange={(e) => handleSearch(e.target.value)}
         defaultValue={searchParams.get("q")?.toString()}

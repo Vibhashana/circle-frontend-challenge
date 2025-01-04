@@ -25,7 +25,6 @@ export default async function Home(props: HomeProps) {
           alt=""
           className="absolute inset-0 size-full object-cover"
         />
-        {/* <div className="absolute inset-0 bg-blue-900/80"></div> */}
         <div className="content-container relative z-20 text-center text-white">
           <h1 className="mb-4 text-3xl font-bold sm:text-5xl">
             Welcome to BookNest
@@ -37,7 +36,7 @@ export default async function Home(props: HomeProps) {
           </p>
         </div>
       </section>
-      <Search className="sticky top-4 z-30 -mt-[30] border-2 border-neutral-400" />
+      <Search className="sticky top-4 z-30 -mt-[30px] border-2 border-neutral-400" />
       <section className="section sticky top-0">
         <div className="content-container">
           <h1 className="section-title">

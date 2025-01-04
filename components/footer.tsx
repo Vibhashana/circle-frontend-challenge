@@ -3,7 +3,7 @@ import Logo from "./logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-50 pb-4 pt-10">
+    <footer className="bg-blue-50 pb-4 pt-10 dark:bg-neutral-900">
       <div className="content-container">
         <div>
           <Link href="/">
@@ -18,7 +18,7 @@ const Footer = () => {
           <Link
             href="https://https://github.com/Vibhashana"
             target="_blank"
-            className="text-blue-950 hover:underline"
+            className="text-blue-950 hover:underline dark:text-neutral-300"
           >
             Sahan Bandara
           </Link>

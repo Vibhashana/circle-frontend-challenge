@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "@/components/logo";
 import { Button } from "./ui/button";
 import MobileNav from "./mobile-nav";
+import ThemeSwitcher from "./theme-switcher";
 
 const Navbar = () => {
   const menu = [
@@ -14,12 +15,12 @@ const Navbar = () => {
   return (
     <header className="py-2 shadow-lg">
       <div className="content-container flex">
-        <nav className="flex w-full items-center justify-between">
+        <nav className="flex w-full items-center">
           <Link href="/">
             <Logo />
           </Link>
 
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="ml-auto hidden items-center gap-4 md:flex">
             {menu.map(({ title, url }, index) => (
               <Button key={index} variant="ghost" asChild>
                 <Link
@@ -31,6 +32,8 @@ const Navbar = () => {
               </Button>
             ))}
           </div>
+
+          <ThemeSwitcher />
         </nav>
         <MobileNav menu={menu} />
       </div>

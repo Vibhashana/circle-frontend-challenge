@@ -4,7 +4,7 @@ import { Skeleton } from "./ui/skeleton";
 export const BookCardSkeleton = () => {
   return (
     <Card>
-      <CardHeader className="h-[200] p-0">
+      <CardHeader className="h-[200px] p-0">
         <Skeleton className="h-full w-full rounded-t-lg" />
       </CardHeader>
       <CardContent>

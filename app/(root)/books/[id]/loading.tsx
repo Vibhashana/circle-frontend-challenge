@@ -8,7 +8,7 @@ const Loading = () => {
         <div className="content-container">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             <div className="md:col-span-4">
-              <Skeleton className="h-[600] w-full rounded-xl" />
+              <Skeleton className="h-[600px] w-full rounded-xl" />
             </div>
             <div className="flex flex-col justify-center md:col-span-8">
               <Skeleton className="mb-4 h-9 w-1/2" />

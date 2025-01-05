@@ -18,7 +18,6 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     <>
       <section className="section">
         <div className="content-container">
-          <h1 className="section-title">Books</h1>
           {book ? (
             <>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
@@ -32,24 +31,23 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   />
                 </div>
                 <div className="flex flex-col justify-center md:col-span-8">
-                  <h2 className="mb-4 text-3xl font-medium">{book.title}</h2>
-                  <div className="space-y-2">
-                    <div className="mb-8 flex items-center gap-2 text-lg">
-                      <UserPen />
-                      {book.author}
-                    </div>
-                    <div>
-                      <StockDisplay availableStock={book.availableStock || 0} />
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Barcode /> ISBN: {book.isbn}
+                  <h2 className="mb-2 text-3xl font-medium">{book.title}</h2>
+                  <div className="mb-8 flex items-center gap-2">
+                    <UserPen size={16} />
+                    {book.author}
+                  </div>
+
+                  <div className="space-y-4">
+                    <StockDisplay availableStock={book.availableStock || 0} />
+                    <div className="flex items-center gap-2 text-sm text-neutral-800 dark:text-neutral-400">
+                      <Barcode size={16} /> ISBN: {book.isbn}
                     </div>
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-10">
                     <span>$</span>
-                    <span className="text-xl font-bold">{book.price}</span>
+                    <span className="text-3xl font-bold">{book.price}</span>
                   </div>
-                  <div className="mt-2 flex flex-col items-center gap-4 sm:flex-row">
+                  <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
                     <QuantityInput
                       max={book.availableStock || 1}
                       disabled={book.availableStock === 0}

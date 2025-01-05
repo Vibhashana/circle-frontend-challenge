@@ -27,26 +27,26 @@ const Book = ({
       </CardHeader>
       <CardContent className="flex-1">
         <p className="text-lg font-medium">{title}</p>
-        <p className="mb-2 text-sm text-neutral-800 dark:text-neutral-400">
+        <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-400">
           {author}
         </p>
-        <StockDisplay availableStock={availableStock || 0} className="mb-2" />
+        <StockDisplay availableStock={availableStock || 0} className="mb-4" />
         <p>
           <span className="text-sm">$</span>
-          <span className="text-xl font-bold">{price}</span>
+          <span className="text-2xl font-bold">{price}</span>
         </p>
       </CardContent>
       <CardFooter className="flex flex-col flex-wrap gap-4 sm:flex-row">
         <Button
           variant="secondary"
-          className="w-full flex-grow sm:w-auto"
+          className="h-11 w-full flex-grow sm:w-auto md:h-10"
           asChild
         >
           <Link href={`/books/${id}`}>Details</Link>
         </Button>
         <PurchaseBook
           id={id}
-          className="w-full sm:w-auto sm:flex-grow-[2]"
+          className="h-11 w-full px-4 sm:w-auto sm:flex-grow-[2] md:h-10"
           disabled={availableStock === 0}
         />
       </CardFooter>

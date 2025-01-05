@@ -59,10 +59,7 @@ const PurchaseBook = ({
 
   return (
     <Button
-      className={clsx(
-        "relative overflow-hidden bg-blue-600 px-8 hover:bg-blue-800 disabled:pointer-events-auto disabled:cursor-not-allowed disabled:hover:bg-blue-600 dark:text-primary",
-        className
-      )}
+      className={clsx("relative overflow-hidden", className)}
       size="lg"
       onClick={handlePurchase}
       disabled={disabled || isPending}

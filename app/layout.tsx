@@ -3,6 +3,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,14 +29,20 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="BookNest" />
       </head>
-      <body className={`${poppins.className} antialiased`}>
+      <body
+        className={`${poppins.className} flex min-h-screen flex-col antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           storageKey="theme"
         >
-          {children}
+          <main className="flex flex-1 flex-col">
+            <Navbar />
+            {children}
+          </main>
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>

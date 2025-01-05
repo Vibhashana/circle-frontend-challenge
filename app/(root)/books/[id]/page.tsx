@@ -3,7 +3,7 @@ import PurchaseBook from "@/components/purchase-book";
 import QuantityInput from "@/components/quantity-input";
 import StockDisplay from "@/components/stock-display";
 import { fetchBook } from "@/lib/actions";
-import { Barcode, UserPen } from "lucide-react";
+import { Barcode, BookDashed, UserPen } from "lucide-react";
 import Image from "next/image";
 import RelatedBooks from "@/components/related-books";
 import { Suspense } from "react";
@@ -19,7 +19,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <section className="section">
         <div className="content-container">
           <h1 className="section-title">Books</h1>
-          {book && (
+          {book ? (
             <>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
                 <div className="md:col-span-4">
@@ -63,12 +63,17 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 </div>
               </div>
             </>
+          ) : (
+            <div className="col-span-4 mx-auto flex items-center justify-center gap-4">
+              <BookDashed className="h-12 w-12 text-neutral-400 dark:text-neutral-600" />
+              <p>Sorry, this book cannot be found.</p>
+            </div>
           )}
         </div>
       </section>
 
       <Suspense fallback={<BookCardRowSkeleton />}>
-        <RelatedBooks author={book.author} currentBookId={book.id} />
+        <RelatedBooks author={book?.author} currentBookId={book?.id} />
       </Suspense>
     </>
   );

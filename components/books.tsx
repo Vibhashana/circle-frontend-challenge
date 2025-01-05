@@ -7,7 +7,7 @@ const Books = ({ books }: { books: BooksType }) => {
     return (
       <div className="col-span-4 mx-auto flex items-center justify-center gap-4">
         <BookDashed className="h-12 w-12 text-neutral-400 dark:text-neutral-600" />
-        <p>Sorry, no books found</p>
+        <p>Sorry, no books found.</p>
       </div>
     );
 

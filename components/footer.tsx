@@ -22,7 +22,7 @@ const Footer = () => {
             <Link
               href="https://github.com/Vibhashana"
               target="_blank"
-              className="text-blue-950 hover:underline dark:text-neutral-300"
+              className="text-blue-950 underline decoration-dashed underline-offset-2 hover:decoration-solid dark:text-neutral-300"
             >
               Sahan Bandara
             </Link>

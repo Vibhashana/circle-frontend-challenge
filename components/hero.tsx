@@ -9,6 +9,7 @@ const Hero = () => {
         height={600}
         alt=""
         className="absolute inset-0 size-full object-cover"
+        priority
       />
       <div className="content-container relative z-20 text-center text-white">
         <h1 className="mb-4 text-3xl font-bold sm:text-5xl">

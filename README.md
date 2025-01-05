@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BookNest
 
-## Getting Started
+BookNest is a modern web application built with Next.js that provides an intuitive interface for browsing and purchasing books online.
 
-First, run the development server:
+![Next.js Badge](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=flat-square) ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat-square) ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat-square) ![shadcn/ui Badge](https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff&style=flat-square) ![Sentry Badge](https://img.shields.io/badge/Sentry-362D59?logo=sentry&logoColor=fff&style=flat-square)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 📚 Browse books catalog
+- 🔍 Search functionality
+- 📖 Detailed book pages
+- 🛒 Book purchasing system
+- 🌓 Dark/Light mode support
+- 📱 Responsive mobile-first design
+- ⚡ Fast page loads with Next.js App Router
+- 🔄 Real-time UI updates
+- 🎨 Modern UI with Tailwind CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React](https://reactjs.org/) - UI library
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [ShadCN UI](https://ui.shadcn.com/) - UI components
+- [Lucide Icons](https://lucide.dev/) - Icon system
+- [Sentry](https://sentry.io/) - Error tracking
 
-## Learn More
+## 🚀 Getting Started
 
-    To learn more about Next.js, take a look at the following resources:
+1. Clone the repository
+2. Install dependencies:
+   ```bash:terminal
+   npm install
+   ```
+3. Set up environment variables:
+   ```bash
+   # for the API server:
+   NEXT_PUBLIC_API_URL=
+   ```
+4. Run the development server:
+   ```bash:terminal
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/app` - Next.js application routes and pages
+- `/components` - Reusable React components
+- `/lib` - Utility functions and actions
+- `/hooks` - Custom React hooks
+- `/public` - Static assets
+- `/types` - TypeScript types
+- `/utils` - Utility functions
 
-## Deploy on Vercel
+## 🧩 Key Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `Book.tsx` - Displays individual book information
+- `Books.tsx` - Renders the book collection
+- `PurchaseBook.tsx` - Handles book purchasing flow
+- `Skeletons.tsx` - Loading state components
+- `MobileNav.tsx` - Mobile navigation menu
+- `Footer.tsx` - Site footer component
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Development
+
+The project uses several development tools and configurations:
+
+- `ESLint` for code linting
+- `Prettier` for code formatting
+- `TypeScript` for type safety
+- `Tailwind CSS` for styling
+
+## 🔍 Monitoring with Sentry
+
+The application uses Sentry for error tracking and performance monitoring:
+
+- **Error Tracking**: Automatic capture of runtime errors and exceptions
+- **Performance Monitoring**: Track page load times and API calls
+- **Session Replay**: Reproduce issues with session replay feature
+- **Release Tracking**: Monitor deployments and releases
+- **Environment Separation**: Different environments (development/production) tracking
+- **Custom Error Boundaries**: Graceful error handling for better UX

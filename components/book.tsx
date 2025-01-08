@@ -19,10 +19,11 @@ const Book = ({
         <Image
           src="https://images.unsplash.com/photo-1592496431122-2349e0fbc666?q=80&w=2112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Book name"
-          width={300}
-          height={450}
+          width={240}
+          height={360}
           className="aspect-[1/1.5] w-full rounded-xl object-cover"
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </CardHeader>
       <CardContent className="flex-1">

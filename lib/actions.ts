@@ -29,7 +29,7 @@ export const fetchBooks = async (query?: string) => {
   }
 };
 
-export const fetchBook = async (id: string) => {
+export const fetchBookById = async (id: string) => {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/books/${id}`

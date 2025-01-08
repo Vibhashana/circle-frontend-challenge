@@ -1,8 +1,7 @@
-import { Book } from "@/types/book-types";
 import PurchaseBook from "@/components/purchase-book";
 import QuantityInput from "@/components/quantity-input";
 import StockDisplay from "@/components/stock-display";
-import { fetchBook } from "@/lib/actions";
+import { fetchBookById } from "@/lib/actions";
 import { Barcode, BookDashed, UserPen } from "lucide-react";
 import Image from "next/image";
 import RelatedBooks from "@/components/related-books";
@@ -12,7 +11,7 @@ import { BookCardRowSkeleton } from "@/components/skeletons";
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
 
-  const book: Book = await fetchBook(id);
+  const book = await fetchBookById(id);
 
   return (
     <>
@@ -23,11 +22,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
                 <div className="md:col-span-4">
                   <Image
-                    src="https://picsum.photos/400/600"
+                    src="https://picsum.photos/395/592"
                     alt="Book cover"
-                    width={400}
-                    height={600}
+                    width={395}
+                    height={592}
                     className="w-full rounded-xl"
+                    sizes="(min-width: 1360px) 395px, (min-width: 780px) 29.82vw, calc(100vw - 32px)"
                   />
                 </div>
                 <div className="flex flex-col justify-center md:col-span-8">
@@ -70,7 +70,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
       </section>
 
-      <Suspense fallback={<BookCardRowSkeleton />}>
+      <Suspense key={book?.id} fallback={<BookCardRowSkeleton />}>
         <RelatedBooks author={book?.author} currentBookId={book?.id} />
       </Suspense>
     </>

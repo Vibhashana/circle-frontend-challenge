@@ -6,10 +6,11 @@ const Hero = () => {
       <Image
         src="https://images.unsplash.com/photo-1520545255830-2511979f3636?q=80&w=2094&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         width={1920}
-        height={600}
+        height={400}
         alt=""
         className="absolute inset-0 size-full object-cover"
         priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
       />
       <div className="content-container relative z-20 text-center text-white">
         <h1 className="mb-4 text-3xl font-bold sm:text-5xl">

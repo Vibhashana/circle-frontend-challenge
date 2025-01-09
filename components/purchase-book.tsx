@@ -7,7 +7,6 @@ import { useTransition } from "react";
 import { purchaseBook } from "@/lib/actions";
 import { clsx } from "clsx";
 import { toast } from "@/hooks/use-toast";
-import { useRouter } from "next/navigation";
 
 const PurchaseBook = ({
   id,
@@ -18,8 +17,6 @@ const PurchaseBook = ({
   className?: string;
   disabled?: boolean;
 }) => {
-  const router = useRouter();
-
   const [isPending, startTransition] = useTransition();
 
   const handlePurchase = async () => {
@@ -36,8 +33,6 @@ const PurchaseBook = ({
           ),
           variant: "default",
         });
-
-        router.refresh();
       } catch (error) {
         // Show error toast with the error message
         toast({

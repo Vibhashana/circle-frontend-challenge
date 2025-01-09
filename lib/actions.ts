@@ -1,6 +1,7 @@
 "use server";
 
 import { Book } from "@/types/book-types";
+import { revalidatePath } from "next/cache";
 
 export const fetchBooks = async (query?: string) => {
   try {
@@ -73,6 +74,8 @@ export const purchaseBook = async (id: string | number) => {
       }
       throw new Error("Something went wrong");
     }
+
+    revalidatePath("/", "layout");
 
     return data as SuccessResponse;
   } catch (error) {

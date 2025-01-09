@@ -6,15 +6,38 @@ BookNest is a modern web application built with Next.js that provides an intuiti
 
 ## ✨ Features
 
+### ⚙️ Core Features
+
 - 📚 Browse books catalog
-- 🔍 Search functionality
-- 📖 Detailed book pages
+- 🔍 Advanced search functionality with debouncing
+- 📖 Detailed book pages with comprehensive information
 - 🛒 Book purchasing system
-- 🌓 Dark/Light mode support
+- 🌓 Dark/Light mode theme switcher
 - 📱 Responsive mobile-first design
 - ⚡ Fast page loads with Next.js App Router
 - 🔄 Real-time UI updates
 - 🎨 Modern UI with Tailwind CSS
+- 🎯 Accessible components
+
+### 🛠️ Technical Features
+
+- ⚛️ Server-side rendering (SSR) with Next.js 15
+- 🎯 Type-safe development with TypeScript
+- 🎨 Styled using Tailwind CSS with CSS variables
+- 🧩 Reusable UI components with shadcn/ui
+- 🔍 Client-side search with debouncing
+- 🖼️ Optimized image loading
+- 🚦 API route handling
+- 📱 Mobile-responsive layouts
+
+### 👨‍💻 Developer Experience
+
+- 🧪 ESLint for code linting
+- ✨ Prettier for code formatting
+- 🐶 Husky for git hooks
+- 📝 Lint-staged for staged files linting
+- 🎯 TypeScript for type checking
+- 🔄 Hot reloading in development
 
 ## 🛠️ Tech Stack
 
@@ -68,6 +91,7 @@ The project uses several development tools and configurations:
 
 - `ESLint` for code linting
 - `Prettier` for code formatting
+- `Husky` for Git pre-commit hooks
 - `TypeScript` for type safety
 - `Tailwind CSS` for styling
 

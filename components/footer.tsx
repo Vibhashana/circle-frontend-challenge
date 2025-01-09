@@ -50,7 +50,7 @@ const Footer = () => {
           <p>
             Made with ❤️ by{" "}
             <Link
-              href="https://github.com/Vibhashana"
+              href="https://sahanbandara.com"
               target="_blank"
               className="text-blue-950 underline decoration-dashed underline-offset-2 hover:decoration-solid dark:text-neutral-300"
             >

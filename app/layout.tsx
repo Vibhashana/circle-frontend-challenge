@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { baseUrl } from "@/lib/constants";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -12,8 +13,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: {
-    template: "BookNest | %s",
+    template: "%s |  BookNest",
     default: "BookNest",
   },
   description: "A book store for everyone!",

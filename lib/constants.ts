@@ -1,6 +1,8 @@
 import { Social } from "@/types/social-types";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
+export const baseUrl = "https://circle-frontend-challenge-frontend.vercel.app";
+
 export const socials: Social[] = [
   {
     name: "YouTube",

@@ -7,8 +7,41 @@ import Image from "next/image";
 import RelatedBooks from "@/components/related-books";
 import { Suspense } from "react";
 import { BookCardRowSkeleton } from "@/components/skeletons";
+import { Metadata } from "next";
 
-const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  try {
+    const id = (await params).id;
+
+    const book = await fetchBookById(id);
+
+    if (!book) {
+      return {
+        title: "Not found",
+        description: "Sorry, this book cannot be found.",
+      };
+    }
+
+    return {
+      title: `${book?.title} by ${book?.author}`,
+      alternates: {
+        canonical: `/books/${book?.id}`,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      title: "Not found",
+      description: "Sorry, this book cannot be found.",
+    };
+  }
+}
+
+const Page = async ({ params }: Props) => {
   const id = (await params).id;
 
   const book = await fetchBookById(id);

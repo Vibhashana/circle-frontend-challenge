@@ -3,7 +3,7 @@
 import { Book } from "@/types/book-types";
 import { revalidatePath } from "next/cache";
 
-export const fetchBooks = async (query?: string) => {
+export const fetchBooks = async (query?: string): Promise<Book[]> => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/books`);
     if (!response.ok) {
